@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <section>
+        <div class="button-box">
+            <button style="background: none; border: none;"  id="button" onclick="openSite()"><img width="70%" src="red-gift-box-3d-png-removebg-preview.png" alt=""></button>
+        <div>
+        <div id="site" class="main-content">
+            <div  class="main-box">
+                <div class="hbd">
+                    <h2 class="text1">Happy BirthDay</h2>
+                    <h2 class="text2">RISHITHA</h2> 
+                    
+                </div>
+                <div class="time">
+                    <h3>The World Just Got Luckier Since</h>
+                    <h3 class="dates"><span class="precision" id="yrs"></span>Years   <span class="precision " id="mons"></span>Months    <span class="precision" id="days"></span>Days   <span class="precision" id="hrs"></span>Hours   <br><span class="precision" id="mins"></span>Minutes    <span class="precision" id="secs"></span>Seconds</h3>
+                </div>
+                <div class="set">
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div> 
+                    <div><img src="image-removebg-preview.png" width="140px"></div>
+                </div> 
+            </div>
+            <div class="main-img">
+                <img src="image (1).png" width="500px ">
+                <div class="tree-set">
+                    <div><img src="hdhearts/1.png" width="40px"></div> 
+                    <div><img src="hdhearts/2.png" width="40px"></div> 
+                    <div><img src="hdhearts/3.png" width="40px"></div> 
+                    <div><img src="hdhearts/4.png" width="40px"></div> 
+                    <div><img src="hdhearts/1.png" width="40px"></div> 
+                    <div><img src="hdhearts/2.png" width="40px"></div> 
+                    <div><img src="hdhearts/3.png" width="40px"></div>
+                    <div><img src="hdhearts/4.png" width="40px"></div> 
+                </div>
+            </div>
+        </div>
+        
+    </section>
+
+    <script>
+         function calculateElapsedTime() {
+    const targetDate = new Date('2008-08-07T10:23:00');
+    const now = new Date();
+
+    // Calculate the total difference in milliseconds
+    const timeDifference = now - targetDate;
+
+    // Calculate the total number of days
+    const totalDays = Math.floor(timeDifference / (1000 * 60 * 60 * 24));
+
+    // Calculate years, months, and days
+    let years = now.getFullYear() - targetDate.getFullYear();
+    let months = now.getMonth() - targetDate.getMonth();
+    let days = now.getDate() - targetDate.getDate();
+
+    // Adjust for negative days
+    if (days < 0) {
+        months--;
+        const lastMonth = new Date(now.getFullYear(), now.getMonth() - 1, 1);
+        days += new Date(lastMonth.getFullYear(), lastMonth.getMonth() + 1, 0).getDate();
+    }
+
+    // Adjust for negative months
+    if (months < 0) {
+        years--;
+        months += 12;
+    }
+
+    // Calculate hours, minutes, and seconds from the remaining milliseconds
+    const millisecondsInDay = 1000 * 60 * 60 * 24;
+    const remainingMilliseconds = timeDifference % millisecondsInDay;
+    const hours = Math.floor(remainingMilliseconds / (1000 * 60 * 60));
+    const minutes = Math.floor((remainingMilliseconds % (1000 * 60 * 60)) / (1000 * 60));
+    const seconds = Math.floor((remainingMilliseconds % (1000 * 60)) / 1000);
+
+    // Update the HTML elements
+    document.getElementById('yrs').innerHTML = `${years}`;
+    document.getElementById('mons').innerHTML = `${months}`;
+    document.getElementById('days').innerHTML = `${days}`;
+    document.getElementById('hrs').innerHTML = `${hours}`;
+    document.getElementById('mins').innerHTML = `${minutes}`;
+    document.getElementById('secs').innerHTML = `${seconds}`;
+}
+
+// Update the time every second
+setInterval(calculateElapsedTime, 1000);
+
+// Initial call to set the elapsed time on page load
+calculateElapsedTime();
+
+
+function openSite() {
+    document.getElementById('button').style.display = "none";
+    document.getElementById('site').style.display = "flex";
+    
+}
+    </script>
+</body>
+</html>
